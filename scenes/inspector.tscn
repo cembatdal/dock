@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cnvamc1a6hrfr"]
+
+[ext_resource type="Script" uid="uid://dyhv7n6oxtwxx" path="res://scripts/inspector.gd" id="1_hu1vf"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_oykud"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oykud"]
+
+[node name="Inspector" type="CharacterBody3D" unique_id=128733647]
+script = ExtResource("1_hu1vf")
+
+[node name="Body" type="MeshInstance3D" parent="." unique_id=520115976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_oykud")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1193796067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1127366016]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_oykud")
