@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://doe16f7yyifht"]
 
-[ext_resource type="Script" uid="uid://v020bw6xtotf" path="res://scripts/world.gd" id="1_nnsk1"]
+[ext_resource type="Script" uid="uid://v020bw6xtotf" path="res://scripts/inspection_dock.gd" id="1_xxss5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e5uuo"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -24,8 +24,8 @@ size = Vector3(20, 0.2, 20)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nnsk1"]
 data = PackedVector3Array(-10, 0.099999994, 10, 10, 0.099999994, 10, -10, -0.099999994, 10, 10, 0.099999994, 10, 10, -0.099999994, 10, -10, -0.099999994, 10, 10, 0.099999994, -10, -10, 0.099999994, -10, 10, -0.099999994, -10, -10, 0.099999994, -10, -10, -0.099999994, -10, 10, -0.099999994, -10, 10, 0.099999994, 10, 10, 0.099999994, -10, 10, -0.099999994, 10, 10, 0.099999994, -10, 10, -0.099999994, -10, 10, -0.099999994, 10, -10, 0.099999994, -10, -10, 0.099999994, 10, -10, -0.099999994, -10, -10, 0.099999994, 10, -10, -0.099999994, 10, -10, -0.099999994, -10, 10, 0.099999994, 10, -10, 0.099999994, 10, 10, 0.099999994, -10, -10, 0.099999994, 10, -10, 0.099999994, -10, 10, 0.099999994, -10, -10, -0.099999994, 10, 10, -0.099999994, 10, -10, -0.099999994, -10, 10, -0.099999994, 10, 10, -0.099999994, -10, -10, -0.099999994, -10)
 
-[node name="World" type="Node3D" unique_id=841731631]
-script = ExtResource("1_nnsk1")
+[node name="InspectionDock" type="Node3D" unique_id=841731631]
+script = ExtResource("1_xxss5")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=993717109]
 environment = SubResource("Environment_rwgxs")

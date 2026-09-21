@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://csdfbkccv2lmm"]
+
+[ext_resource type="Script" uid="uid://diwta406sohy8" path="res://scripts/game_manager.gd" id="1_glms7"]
+[ext_resource type="Script" uid="uid://yggnkda65rq0" path="res://scripts/location_manager.gd" id="1_hwd4i"]
+[ext_resource type="Script" uid="uid://dtn847rkw3r3d" path="res://scripts/scene_creator.gd" id="3_creator"]
+[ext_resource type="Script" uid="uid://buuvg1s7mv8ix" path="res://scripts/player_manager.gd" id="4_player"]
+[ext_resource type="Script" uid="uid://g6di22sb362v" path="res://scripts/cargo_manager.gd" id="5_cargo"]
+
+[node name="GameManager" type="Node" unique_id=941071520]
+script = ExtResource("1_glms7")
+
+[node name="LocationManager" type="Node" parent="." unique_id=1012329982]
+script = ExtResource("1_hwd4i")
+
+[node name="CargoManager" type="Node" parent="." unique_id=46338342]
+script = ExtResource("5_cargo")
+
+[node name="SceneCreator" type="Node" parent="." unique_id=1026554723]
+script = ExtResource("3_creator")
+
+[node name="PlayerManager" type="Node" parent="." unique_id=1266109090]
+script = ExtResource("4_player")
+
+[node name="LocationContainer" type="Node3D" parent="." unique_id=1482362686]

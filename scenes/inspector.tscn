@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://cnvamc1a6hrfr"]
 
 [ext_resource type="Script" uid="uid://dyhv7n6oxtwxx" path="res://scripts/inspector.gd" id="1_hu1vf"]
+[ext_resource type="Script" uid="uid://c4mple0aagkbp" path="res://scripts/character_movement.gd" id="2_movement"]
+[ext_resource type="Script" uid="uid://cd61bspj4xprk" path="res://scripts/player_input.gd" id="3_input"]
+[ext_resource type="Script" uid="uid://cyty58w3dl1qd" path="res://scripts/character_look.gd" id="4_look"]
+[ext_resource type="Script" uid="uid://qq4m633jq2d0" path="res://scripts/mouse_capture.gd" id="5_mouse"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_oykud"]
 
@@ -19,3 +23,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1127366016]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_oykud")
+
+[node name="CharacterMovement" type="Node" parent="." unique_id=274672354]
+script = ExtResource("2_movement")
+
+[node name="PlayerInput" type="Node" parent="." unique_id=2018606618]
+script = ExtResource("3_input")
+
+[node name="CharacterLook" type="Node" parent="." unique_id=807233382]
+script = ExtResource("4_look")
+
+[node name="MouseCapture" type="Node" parent="." unique_id=629357873]
+script = ExtResource("5_mouse")
