@@ -1,3 +1,4 @@
+class_name CharacterMovement
 extends Node
 
 const SPEED = 5.0
@@ -13,7 +14,7 @@ func move_character(
 		character.velocity.y = JUMP_VELOCITY
 
 	var direction := (
-		character.transform.basis * Vector3(input_direction.x, 0, input_direction.y)
+		character.global_transform.basis * Vector3(input_direction.x, 0, input_direction.y)
 	).normalized()
 
 	if direction:

@@ -1,3 +1,4 @@
+class_name SceneCreator
 extends Node
 
 func create(scene: PackedScene) -> Node3D:

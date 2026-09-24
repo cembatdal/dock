@@ -1,3 +1,4 @@
+class_name PlayerInput
 extends Node
 
 func get_direction() -> Vector2:

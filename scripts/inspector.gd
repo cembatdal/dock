@@ -1,14 +1,21 @@
+class_name Inspector
 extends CharacterBody3D
 
 @export var mouse_sensitivity: float = 0.002
 @onready var camera: Camera3D = $Camera3D
-@onready var movement = $CharacterMovement
-@onready var player_input = $PlayerInput
-@onready var look = $CharacterLook
-@onready var mouse_capture = $MouseCapture
+@onready var movement: CharacterMovement = $CharacterMovement
+@onready var player_input: PlayerInput = $PlayerInput
+@onready var look: CharacterLook = $CharacterLook
+@onready var mouse_capture: MouseCapture = $MouseCapture
 
 func _ready() -> void:
+	set_physics_process(false)
+	set_process_unhandled_input(false)
+
+func activate() -> void:
 	mouse_capture.capture()
+	set_physics_process(true)
+	set_process_unhandled_input(true)
 
 func _unhandled_input(event: InputEvent) -> void:
 	mouse_capture.handle_event(event)

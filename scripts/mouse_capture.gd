@@ -1,3 +1,4 @@
+class_name MouseCapture
 extends Node
 
 func capture() -> void:
